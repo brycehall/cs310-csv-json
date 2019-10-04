@@ -74,8 +74,8 @@ public class Converter {
             while (iterator.hasNext()) {
                 record = iterator.next(); 
                 jsonObject = new JSONObject();
-                for (int i = 0; i < headings.length; ++i) { 
-                    jsonObject.put(headings[i], record[i]); 
+                for (int i = 0; i < record.length; ++i) { 
+                    jsonObject.put(record[i], record[i]); 
                     }
                 records.add(jsonObject); 
                 }  
