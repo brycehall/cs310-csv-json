@@ -62,8 +62,15 @@ public class Converter {
             JSONParser parser = new JSONParser();
             JSONObject jsonObject = (JSONObject)parser.parse(jsonString);
             
+            List<String[]> full = reader.readAll();
+            Iterator<String[]> iterator = full.iterator();
             
-                        
+            while (parser != null) {
+                csvWriter.writeNext(csvData);
+            
+                String csvString = writer.toString();
+            }
+            
         }
         
         catch(Exception e) { return e.toString(); }
